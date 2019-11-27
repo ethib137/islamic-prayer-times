@@ -157,16 +157,8 @@ export default class extends React.Component {
 					<ClayTable>
 						<ClayTable.Body>
 							<ClayTable.Row>
-								<ClayTable.Cell>{"Imsak"}</ClayTable.Cell>
-								<ClayTable.Cell>{timings.Imsak && timings.Imsak}</ClayTable.Cell>
-							</ClayTable.Row>
-							<ClayTable.Row>
 								<ClayTable.Cell>{"Fajr"}</ClayTable.Cell>
 								<ClayTable.Cell>{timings.Fajr && timings.Fajr}</ClayTable.Cell>
-							</ClayTable.Row>
-							<ClayTable.Row>
-								<ClayTable.Cell>{"Sunrise"}</ClayTable.Cell>
-								<ClayTable.Cell>{timings.Sunrise && timings.Sunrise}</ClayTable.Cell>
 							</ClayTable.Row>
 							<ClayTable.Row>
 								<ClayTable.Cell>{"Dhuhr"}</ClayTable.Cell>
@@ -183,10 +175,6 @@ export default class extends React.Component {
 							<ClayTable.Row>
 								<ClayTable.Cell>{"Isha"}</ClayTable.Cell>
 								<ClayTable.Cell>{timings.Isha && timings.Isha}</ClayTable.Cell>
-							</ClayTable.Row>
-							<ClayTable.Row>
-								<ClayTable.Cell>{"Midnight"}</ClayTable.Cell>
-								<ClayTable.Cell>{timings.Midnight && timings.Midnight}</ClayTable.Cell>
 							</ClayTable.Row>
 						</ClayTable.Body>
 					</ClayTable>
