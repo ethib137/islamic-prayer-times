@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 
 import ClayAlert from '@clayui/alert';
 import ClayForm, {ClayInput} from '@clayui/form';
+import ClayList from '@clayui/list';
 import ClayLoadingIndicator from '@clayui/loading-indicator';
-import ClayTable from '@clayui/table';
 
 const loadingStyles = {
 	backgroundColor: 'rgba(0,0,0,0.2)',
@@ -137,8 +137,6 @@ export default class extends React.Component {
 						</div>
 					</ClayForm.Group>
 				</ClayForm>
-				
-				<h1>{Liferay.Language.get('timings')}</h1>
 
 				{error &&
 					<ClayAlert displayType="warning" title="Error">
@@ -154,30 +152,44 @@ export default class extends React.Component {
 						</div>
 					}
 
-					<ClayTable>
-						<ClayTable.Body>
-							<ClayTable.Row>
-								<ClayTable.Cell>{Liferay.Language.get('fajr')}</ClayTable.Cell>
-								<ClayTable.Cell>{timings.Fajr && timings.Fajr}</ClayTable.Cell>
-							</ClayTable.Row>
-							<ClayTable.Row>
-								<ClayTable.Cell>{Liferay.Language.get('dhuhr')}</ClayTable.Cell>
-								<ClayTable.Cell>{timings.Dhuhr && timings.Dhuhr}</ClayTable.Cell>
-							</ClayTable.Row>
-							<ClayTable.Row>
-								<ClayTable.Cell>{Liferay.Language.get('asr')}</ClayTable.Cell>
-								<ClayTable.Cell>{timings.Asr && timings.Asr}</ClayTable.Cell>
-							</ClayTable.Row>
-							<ClayTable.Row>
-								<ClayTable.Cell>{Liferay.Language.get('maghrib')}</ClayTable.Cell>
-								<ClayTable.Cell>{timings.Maghrib && timings.Maghrib}</ClayTable.Cell>
-							</ClayTable.Row>
-							<ClayTable.Row>
-								<ClayTable.Cell>{Liferay.Language.get('isha')}</ClayTable.Cell>
-								<ClayTable.Cell>{timings.Isha && timings.Isha}</ClayTable.Cell>
-							</ClayTable.Row>
-						</ClayTable.Body>
-					</ClayTable>
+					<ClayList>
+						<ClayList.Header>{Liferay.Language.get('timings')}</ClayList.Header>
+						<ClayList.Item flex>
+							<ClayList.ItemField className="col-6">
+								<ClayList.ItemTitle>{Liferay.Language.get('fajr')}</ClayList.ItemTitle>
+							</ClayList.ItemField>
+
+							<ClayList.ItemField className="col-6">{timings.Fajr && timings.Fajr}</ClayList.ItemField>
+						</ClayList.Item>
+						<ClayList.Item flex>
+							<ClayList.ItemField className="col-6">
+								<ClayList.ItemTitle>{Liferay.Language.get('dhuhr')}</ClayList.ItemTitle>
+							</ClayList.ItemField>
+
+							<ClayList.ItemField className="col-6">{timings.Dhuhr && timings.Dhuhr}</ClayList.ItemField>
+						</ClayList.Item>
+						<ClayList.Item flex>
+							<ClayList.ItemField className="col-6">
+								<ClayList.ItemTitle>{Liferay.Language.get('asr')}</ClayList.ItemTitle>
+							</ClayList.ItemField>
+
+							<ClayList.ItemField className="col-6">{timings.Asr && timings.Asr}</ClayList.ItemField>
+						</ClayList.Item>
+						<ClayList.Item flex>
+							<ClayList.ItemField className="col-6">
+								<ClayList.ItemTitle>{Liferay.Language.get('maghrib')}</ClayList.ItemTitle>
+							</ClayList.ItemField>
+
+							<ClayList.ItemField className="col-6">{timings.Maghrib && timings.Maghrib}</ClayList.ItemField>
+						</ClayList.Item>
+						<ClayList.Item flex>
+							<ClayList.ItemField className="col-6">
+								<ClayList.ItemTitle>{Liferay.Language.get('isha')}</ClayList.ItemTitle>
+							</ClayList.ItemField>
+
+							<ClayList.ItemField className="col-6">{timings.Isha && timings.Isha}</ClayList.ItemField>
+						</ClayList.Item>
+					</ClayList>
 				</div>
 			</div>
 		);
