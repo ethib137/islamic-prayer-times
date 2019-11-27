@@ -104,7 +104,7 @@ export default class extends React.Component {
 				<ClayForm onSubmit={this._handleSubmit}>
 					<ClayForm.Group className="form-group-autofit">
 						<div className="form-group-item">
-							<label htmlFor="country">Country</label>
+							<label htmlFor="country">Liferay.Language.get('country')</label>
 
 							<ClayInput
 								id="country"
@@ -116,7 +116,7 @@ export default class extends React.Component {
 						</div>
 
 						<div className="form-group-item">
-							<label htmlFor="city">City</label>
+							<label htmlFor="city">Liferay.Language.get('city')</label>
 
 							<ClayInput
 								id="city"
@@ -132,13 +132,13 @@ export default class extends React.Component {
 							<ClayInput
 								className="btn btn-primary"
 								type="submit"
-								value="Get Prayer Times"
+								value={Liferay.Language.get('get-prayer-times')}
 							/>
 						</div>
 					</ClayForm.Group>
 				</ClayForm>
 				
-				<h1>Timings</h1>
+				<h1>{Liferay.Language.get('timings')}</h1>
 
 				{error &&
 					<ClayAlert displayType="warning" title="Error">
@@ -157,23 +157,23 @@ export default class extends React.Component {
 					<ClayTable>
 						<ClayTable.Body>
 							<ClayTable.Row>
-								<ClayTable.Cell>{"Fajr"}</ClayTable.Cell>
+								<ClayTable.Cell>{Liferay.Language.get('fajr')}</ClayTable.Cell>
 								<ClayTable.Cell>{timings.Fajr && timings.Fajr}</ClayTable.Cell>
 							</ClayTable.Row>
 							<ClayTable.Row>
-								<ClayTable.Cell>{"Dhuhr"}</ClayTable.Cell>
+								<ClayTable.Cell>{Liferay.Language.get('dhuhr')}</ClayTable.Cell>
 								<ClayTable.Cell>{timings.Dhuhr && timings.Dhuhr}</ClayTable.Cell>
 							</ClayTable.Row>
 							<ClayTable.Row>
-								<ClayTable.Cell>{"Asr"}</ClayTable.Cell>
+								<ClayTable.Cell>{Liferay.Language.get('asr')}</ClayTable.Cell>
 								<ClayTable.Cell>{timings.Asr && timings.Asr}</ClayTable.Cell>
 							</ClayTable.Row>
 							<ClayTable.Row>
-								<ClayTable.Cell>{"Maghrib"}</ClayTable.Cell>
+								<ClayTable.Cell>{Liferay.Language.get('maghrib')}</ClayTable.Cell>
 								<ClayTable.Cell>{timings.Maghrib && timings.Maghrib}</ClayTable.Cell>
 							</ClayTable.Row>
 							<ClayTable.Row>
-								<ClayTable.Cell>{"Isha"}</ClayTable.Cell>
+								<ClayTable.Cell>{Liferay.Language.get('isha')}</ClayTable.Cell>
 								<ClayTable.Cell>{timings.Isha && timings.Isha}</ClayTable.Cell>
 							</ClayTable.Row>
 						</ClayTable.Body>
