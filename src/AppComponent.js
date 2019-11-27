@@ -104,7 +104,7 @@ export default class extends React.Component {
 				<ClayForm onSubmit={this._handleSubmit}>
 					<ClayForm.Group className="form-group-autofit">
 						<div className="form-group-item">
-							<label htmlFor="country">Liferay.Language.get('country')</label>
+							<label htmlFor="country">{Liferay.Language.get('country')}</label>
 
 							<ClayInput
 								id="country"
@@ -116,7 +116,7 @@ export default class extends React.Component {
 						</div>
 
 						<div className="form-group-item">
-							<label htmlFor="city">Liferay.Language.get('city')</label>
+							<label htmlFor="city">{Liferay.Language.get('city')}</label>
 
 							<ClayInput
 								id="city"
